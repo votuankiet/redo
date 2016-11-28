@@ -1,0 +1,31 @@
+<div>
+    <div *ngIf="showScores == false" class="row">
+        <div class="col-md-8">
+            <!--cannot user ngFor and ngIf on the same element, have to use ng-container-->
+            <ng-container *ngFor="let userDefAnswer of allDefinition">
+                <div  *ngIf="userDefAnswer.show">
+                    <p>
+                        {{userDefAnswer.wordDef.definition}}<br>
+                        <input [(ngModel)]="userDefAnswer.userAnswer">
+                    </p>
+                </div>
+            </ng-container>
+
+            <div>
+                <button (click)="submitAnswer()" class="btn btn-default">Submit</button>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div *ngFor="let wordCount of allOptions">
+                {{wordCount.word}} : {{wordCount.count}}
+            </div>
+        </div>
+    </div>
+    <div  *ngIf="showScores == true">
+        <h3>Scores: {{correctAnswer}}/{{allDefinition.length}}</h3>
+        <button (click)="reviewAnswers()">Review your answers</button>
+        <button *ngIf="correctAnswer != allDefinition.length" (click)="reviewWrongAnswers()">Review wrong answers</button>
+        <button (click)="redo()">Redo this excercise</button>
+    </div>
+</div>

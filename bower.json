@@ -1,0 +1,21 @@
+{
+  "name": "redo",
+  "description": "repeatable exercises",
+  "main": "server.js",
+  "authors": [
+    "votuankiet <votuankiet162@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/votuankiet/redo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./client/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

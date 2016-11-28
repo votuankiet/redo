@@ -1,0 +1,16 @@
+<div>
+    <div  class="unitCheckbox" *ngFor="let unitCheckbox of unitCheckboxes">
+        <div>
+            <label>
+                <input type="checkbox">{{unitCheckbox.unitName}}
+            </label>
+        </div>
+        <div *ngFor="let sectionCheckbox of unitCheckbox.sectionCheckboxes" class="sectionCheckbox">
+            <label>
+                <input type="checkbox" [(ngModel)]="sectionCheckbox.selected">{{sectionCheckbox.sectionTitle}}
+            </label>
+        </div>
+    </div>
+
+    <button (click)="start()">Start</button>
+</div>
