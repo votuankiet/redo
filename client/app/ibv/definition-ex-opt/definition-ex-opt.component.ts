@@ -52,8 +52,10 @@ export class DefinitionExOptComponent {
             }
         }
 
-        this.userOptionService.setDefinitionOption(definitionOpt);
-
-        this.router.navigate(['/ex-definition']);
+        if (definitionOpt.getSelectedSections().length > 0){
+            this.userOptionService.setDefinitionOption(definitionOpt);
+            this.router.navigate(['/ex-definition']);
+        }
+       
     }
 }

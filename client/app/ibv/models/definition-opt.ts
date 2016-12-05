@@ -1,6 +1,6 @@
 import {SectionId} from './section-id'
 export class DefinitionOption{
-    selectedSections: SectionId[];
+    private selectedSections: SectionId[];
 
     constructor(){
         this.selectedSections = [];
@@ -19,5 +19,9 @@ export class DefinitionOption{
         }
 
         return false;
+    }
+
+    getSelectedSections(){
+        return this.selectedSections;
     }
 }

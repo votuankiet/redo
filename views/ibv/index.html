@@ -3,10 +3,11 @@
   <head>
     <base href="/myapp/ibv">
     <title>Redo</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">    
+
+    <% include ../partials/head.html %>
+    
     <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/app/ibv/styles/ibv.css">
     <!-- 1. Load libraries -->
      <!-- Polyfill(s) for older browsers -->
     <script src="/node_modules/core-js/client/shim.min.js"></script>
@@ -21,6 +22,9 @@
   </head>
   <!-- 3. Display the application -->
   <body>
+    <% include ../partials/header.html %>
     <my-app>Loading...</my-app>
+    <% include ../partials/google-ad.html%>
+    <% include ../partials/footer.html %>
   </body>
 </html>
