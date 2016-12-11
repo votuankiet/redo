@@ -1,22 +1,119 @@
 {
-
-	"unit 01": [
-	    {
-	    	"title" : "evironmental impacts of logging",
-	    	"words": {
-	    		"aquatic": "adj., living in the water",
+	"Unit 01": {
+		"title": "The Natural Word",
+		"definition-sections": [
+			{
+				"title": "Evironmental Impacts of Logging",
+				"words": {
+					"aquatic": "adj., living in the water",
 					"array": "n., a large number, a collection",
-					"defense": "n. protection"
-	    	}
-	        
-	    },
-	    {
-	    	"title" : "bird migration",
-	    	"words": {
-				"aspect": "n. a part or feature"	
-		    }
-	        
-	    }
-	    
-	]
+					"defense": "n., protection"
+				}
+			},
+			{
+				"title": "Bird Migration",
+				"words": {
+					"aspect": "n., a part or feature"
+				}
+			},
+			{
+				"title": "Plant Life in the Taklimakan Desert",
+				"words": {
+					"accumulate" : "v., to gradually increase over time"
+				}
+			}
+		]
+	},
+	"Unit 02": {
+		"title": "Leisure Time",
+		"definition-sections": [
+			{
+				"title": "Periferal Vision in Sports",
+				"words": {
+					"anticipate": "v., to expect, be ready for something to happen"
+				}
+			},
+			{
+				"title": "History of the Circus",
+				"words": {
+					"anticipate": "v., to expect, be ready for something to happen"
+				}
+			},
+			{
+				"title": "Uses of Leisure Time",
+				"words": {
+					"anticipate": "v., to expect, be ready for something to happen"
+				}
+			}
+		]
+	},
+	"Unit 03": {
+		"title": "Transportation",
+		"definition-sections": [
+			{
+				"title": "Periferal vision in sports",
+				"words": {
+					"anticipate": "v., to expect, be ready for something to happen"
+				}
+			},
+			{
+				"title": "History of the Circus",
+				"words": {
+					"anticipate": "v., to expect, be ready for something to happen"
+				}
+			},
+			{
+				"title": "Uses of Leisure Time",
+				"words": {
+					"anticipate": "v., to expect, be ready for something to happen"
+				}
+			}
+		]
+	},
+	"Unit 04": {
+		"title": "Culture",
+		"definition-sections": [
+			{
+				"title": "Periferal vision in sports",
+				"words": {
+					"anticipate": "v., to expect, be ready for something to happen"
+				}
+			},
+			{
+				"title": "History of the Circus",
+				"words": {
+					"anticipate": "v., to expect, be ready for something to happen"
+				}
+			},
+			{
+				"title": "Uses of Leisure Time",
+				"words": {
+					"anticipate": "v., to expect, be ready for something to happen"
+				}
+			}
+		]
+	},
+	"Unit 05": {
+		"title": "Health",
+		"definition-sections": [
+			{
+				"title": "Periferal vision in sports",
+				"words": {
+					"anticipate": "v., to expect, be ready for something to happen"
+				}
+			},
+			{
+				"title": "History of the Circus",
+				"words": {
+					"anticipate": "v., to expect, be ready for something to happen"
+				}
+			},
+			{
+				"title": "Uses of Leisure Time",
+				"words": {
+					"anticipate": "v., to expect, be ready for something to happen"
+				}
+			}
+		]
+	}
 }

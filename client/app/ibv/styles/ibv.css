@@ -2,3 +2,16 @@
   background-color: #7B241C;
   color: white;
 }
+
+.unitOptions{
+  
+}
+
+.unitOptions .title{
+  background-color: #31708f;
+  color: white;
+  font-weight: bold;
+}
+
+.unitOptions .sectionCheckbox{
+}

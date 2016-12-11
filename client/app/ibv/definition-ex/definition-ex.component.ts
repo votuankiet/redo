@@ -33,7 +33,7 @@ export class DefinitionExComponent {
     let resources = this.ibvService.getResources();
     
     for (let unitName in resources) {
-      let sections = resources[unitName];
+      let sections = resources[unitName]["definition-sections"];
 
       for (let section of sections) {
         if (this.userOptionService.getDefinitionOption().isSectionSelected(unitName, section.title)){

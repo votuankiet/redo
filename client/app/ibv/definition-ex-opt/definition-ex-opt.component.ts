@@ -15,7 +15,7 @@ import {DefinitionOption} from '../models/definition-opt'
 })
 export class DefinitionExOptComponent {
 
-
+    message: string;
     unitCheckboxes: UnitCheckbox[];// all unit check boxes
 
     constructor(private router: Router, private ibvService: IbvService,
@@ -30,8 +30,9 @@ export class DefinitionExOptComponent {
         this.unitCheckboxes = [];//clear all data 
         let resources = this.ibvService.getResources();
         for (let unitName in resources){
-            let sections = resources[unitName];
-            let unitCheckbox = new UnitCheckbox(unitName)
+            let unit = resources[unitName];
+            let sections = unit["definition-sections"];
+            let unitCheckbox = new UnitCheckbox(unitName, unit.title)
             this.unitCheckboxes.push(unitCheckbox);
             for (let section of sections){
                 let title = section.title;
@@ -39,7 +40,7 @@ export class DefinitionExOptComponent {
                 unitCheckbox.addSectionCheckbox(new SectionCheckbox(title));
             }
         }
-    }
+    };
 
     start(){
         let definitionOpt = new DefinitionOption();
@@ -54,8 +55,15 @@ export class DefinitionExOptComponent {
 
         if (definitionOpt.getSelectedSections().length > 0){
             this.userOptionService.setDefinitionOption(definitionOpt);
+            this.clearMessage();
             this.router.navigate(['/ex-definition']);
+        }else{
+            this.message = "Please select a word list you want to practice.";
         }
        
+    };
+
+    clearMessage(){
+        this.message = undefined;
     }
 }
