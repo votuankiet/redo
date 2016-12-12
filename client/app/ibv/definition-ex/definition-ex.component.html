@@ -6,29 +6,49 @@
 
 <div>
     <div *ngIf="showScores == false" class="row">
-        <div class="col-md-8">
-            <!--cannot user ngFor and ngIf on the same element, have to use ng-container-->
-            <ng-container *ngFor="let userDefAnswer of allDefinition">
-                <div  *ngIf="userDefAnswer.show">
-                    <p>
-                        {{userDefAnswer.wordDef.definition}}<br>
-                        <input [(ngModel)]="userDefAnswer.userAnswer">
-                    </p>
+        <div class="col-md-3 col-sm-3 hidden-xs">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Word list
                 </div>
-            </ng-container>
+                <div class="panel-body">
+                    <ul class="list-group">
+                        <li class="list-group-item" *ngFor="let wordCount of allOptions">
+                            {{wordCount.word}} : {{wordCount.count}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-            <div>
-                <button (click)="submitAnswer()" class="btn btn-default">Submit</button>
+        </div>
+
+        <div class="col-md-9 col-sm-9 col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Select word from word list to match with the given definition.
+                </div>
+                <div class="panel-body">
+
+                    <!--cannot user ngFor and ngIf on the same element, have to use ng-container-->
+                    <ng-container *ngFor="let userDefAnswer of allDefinition">
+                        <div *ngIf="userDefAnswer.show">
+                            <div class="form-group">
+                                <label>{{userDefAnswer.wordDef.definition}}</label>
+                                <input type="text" class="form-control" [(ngModel)]="userDefAnswer.userAnswer">
+                            </div>
+                        </div>
+                    </ng-container>
+
+                    <div class="pull-right">
+                        <button (click)="submitAnswer()" class="btn btn-default btn-lg">Submit</button>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="col-md-3">
-            <div *ngFor="let wordCount of allOptions">
-                {{wordCount.word}} : {{wordCount.count}}
-            </div>
-        </div>
+
     </div>
-    <div  *ngIf="showScores == true">
+    <div *ngIf="showScores == true">
         <h3>Scores: {{correctAnswer}}/{{allDefinition.length}}</h3>
         <button (click)="reviewAnswers()">Review your answers</button>
         <button *ngIf="correctAnswer != allDefinition.length" (click)="reviewWrongAnswers()">Review wrong answers</button>
