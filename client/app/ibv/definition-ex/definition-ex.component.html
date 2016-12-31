@@ -49,9 +49,70 @@
 
     </div>
     <div *ngIf="showScores == true">
-        <h3>Scores: {{correctAnswer}}/{{allDefinition.length}}</h3>
-        <button (click)="reviewAnswers()">Review your answers</button>
-        <button *ngIf="correctAnswer != allDefinition.length" (click)="reviewWrongAnswers()">Review wrong answers</button>
-        <button (click)="redo()">Redo this excercise</button>
+        <div class="jumbotron">
+            <h3 class="text-center"><small>Scores</small> {{correctAnswer}}/{{allDefinition.length}}</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <button type="button" class="btn btn-info btn-block" (click)="reviewAnswers()">Review your answers</button>
+            </div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-primary btn-block" *ngIf="correctAnswer != allDefinition.length" (click)="reviewWrongAnswers()">Review wrong answers</button>
+            </div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-info btn-block" (click)="redo()">Redo this excercise</button>
+            </div>
+        </div>
+
     </div>
+</div>
+
+<!--slider from left-->
+<div class="visible-xs word-list-slider">
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let wordCount of allOptions">
+            {{wordCount.word}} : {{wordCount.count}}
+        </li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+        <li class="list-group-item">test</li>
+
+    </ul>
 </div>
