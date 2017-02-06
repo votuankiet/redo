@@ -69,7 +69,7 @@
 
 <!--slider from left-->
 <div class="visible-xs word-list-slider">
-    <ul class="list-group">
+    <ul class="list-group" [myToggleable]="showMobileWordList">
         <li class="list-group-item" *ngFor="let wordCount of allOptions">
             {{wordCount.word}} : {{wordCount.count}}
         </li>
@@ -117,5 +117,5 @@
     </ul>
 </div>
 <div class="visible-xs">
-    <button type="button" class="btn btn-default view-side-menu-btn">E</button>
+    <button type="button" class="btn btn-default view-side-menu-btn" (click)="toggleShowingMobileWordList()">E</button>
 </div>

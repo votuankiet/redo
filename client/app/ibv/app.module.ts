@@ -12,6 +12,7 @@ import {AppComponent}  from './app.component';
 import {ExcerciseTypesComponent} from './ex-types/ex-types.component';
 import {DefinitionExComponent} from './definition-ex/definition-ex.component';
 import {DefinitionExOptComponent} from './definition-ex-opt/definition-ex-opt.component';
+import {ToggleableDirective} from './directives/toggleable.directive'
 
 @NgModule({
   imports:      [ 
@@ -24,7 +25,8 @@ import {DefinitionExOptComponent} from './definition-ex-opt/definition-ex-opt.co
     AppComponent, 
     ExcerciseTypesComponent,
     DefinitionExOptComponent,
-    DefinitionExComponent
+    DefinitionExComponent,
+    ToggleableDirective
   ],
   bootstrap: [AppComponent]
 })

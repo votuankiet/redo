@@ -18,10 +18,12 @@ export class DefinitionExComponent {
   allOptions: WordCount[];
   correctAnswer: number;
   showScores: boolean;
+  showMobileWordList: boolean;
 
   constructor(private ibvService: IbvService, private userOptionService: UserOptionService) {
     this.ibvService.redirectIfResourceNotLoaded();
     this.showScores = false;
+    this.showMobileWordList = true;
     this.populateDefinition();
   }
 
@@ -94,6 +96,10 @@ export class DefinitionExComponent {
    }
 
    this.showScores = false;
+ }
+
+ toggleShowingMobileWordList(){
+   this.showMobileWordList = !this.showMobileWordList;
  }
 
 }
